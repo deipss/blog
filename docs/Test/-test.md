@@ -2,7 +2,7 @@
 layout: default
 title: Test 
 has_children: true
-permalink: docs/test
+permalink: docs/Test
 ---
 
 # Test

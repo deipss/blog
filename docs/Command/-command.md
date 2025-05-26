@@ -2,7 +2,7 @@
 layout: default
 title: Command 
 has_children: true
-permalink: docs/command
+permalink: docs/Command
 ---
 command
 {: .label .label-green }
