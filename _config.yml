@@ -26,7 +26,7 @@ search_enabled: true
 search:
   # Split pages into sections that can be searched individually
   # Supports 1 - 6, default: 2
-  heading_level: 2
+  heading_level: 5
   # Maximum amount of previews per search result
   # Default: 3
   previews: 3
@@ -55,8 +55,8 @@ heading_anchors: true
 
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
-ga_tracking: UA-2709176-10
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+# ga_tracking: UA-2709176-10
+# ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 back_to_top: true
 back_to_top_text: "Back to top"
@@ -86,3 +86,6 @@ kramdown:
 
 plugins:
   - jekyll-sitemap
+
+exclude:
+  - "aa_temp.md"          # 排除匹配模式的文件
