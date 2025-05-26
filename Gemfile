@@ -6,4 +6,3 @@ gem 'jekyll-sitemap', '~> 1.4.0'
 
 gem "just-the-docs", "0.10.0" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
-gem 'jekyll-toc', '~> 0.19.0'

@@ -53,9 +53,6 @@ GEM
       listen (~> 3.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-toc (0.19.0)
-      jekyll (>= 3.7, < 5.0)
-      nokogiri (~> 1.12)
     json (2.9.1)
     just-the-docs (0.10.0)
       jekyll (>= 3.8.5)
@@ -100,7 +97,6 @@ DEPENDENCIES
   jekyll (~> 4.4.1)
   just-the-docs (= 0.10.0)
   jekyll-sitemap (~> 1.4.0)
-  jekyll-toc (~> 0.19.0)
 
 BUNDLED WITH
    2.5.9
