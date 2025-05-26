@@ -8,6 +8,7 @@ last_modified_date: 2023-07-09
 
 
 # 1. ollama安装安装
+{:toc}
 
 - [allama](https://github.com/jmhessel/allama)
 - [install](https://github.com/ollama/ollama/blob/main/docs/linux.md)
@@ -203,4 +204,3 @@ WantedBy=multi-user.target
 
 
 
-{:toc}
