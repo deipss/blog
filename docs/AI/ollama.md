@@ -2,6 +2,7 @@
 layout: default
 title: ollama
 parent: AI
+last_modified_date: 2023-07-09
 ---
 
 
