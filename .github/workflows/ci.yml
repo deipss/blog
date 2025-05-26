@@ -21,7 +21,5 @@ jobs:
           bundler-cache: true
           # Increment this number if you need to re-download cached gems
           cache-version: 1
-      - name: config set frozen false
-        run: bundle config set frozen false
       - name: Build with Jekyll
         run: bundle exec jekyll build
