@@ -2,7 +2,6 @@
 layout: default
 title: ThreadLocal
 parent: Java
-nav_order: 7
 ---
 
 # 1. ThreadLocal

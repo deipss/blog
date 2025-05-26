@@ -2,7 +2,6 @@
 layout: default
 title: conda
 parent: Command
-nav_order: 1
 ---
 
 

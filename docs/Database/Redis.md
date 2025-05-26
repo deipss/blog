@@ -2,7 +2,6 @@
 layout: default
 title: Redis
 parent: Database
-nav_order: 3
 ---
 
 # 1. 主从复制

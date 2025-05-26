@@ -2,7 +2,6 @@
 layout: default
 title: spring-boot
 parent: Spring
-nav_order: 3
 ---
 
 # 1. Auto Configuration

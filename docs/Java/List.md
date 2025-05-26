@@ -2,7 +2,6 @@
 layout: default
 title: List
 parent: Java
-nav_order: 4
 ---
 
 # 1. ArrayList

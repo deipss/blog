@@ -2,7 +2,6 @@
 layout: default
 title: sandbox请求参数篡改排查
 parent: Net
-nav_order: 1
 ---
 
 # 1. 排查sandbox-repeater的请求参数被篡改

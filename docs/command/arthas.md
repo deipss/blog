@@ -2,7 +2,6 @@
 layout: default
 title: arthas
 parent: Command
-nav_order: 15
 ---
 
 # 1. Arthas

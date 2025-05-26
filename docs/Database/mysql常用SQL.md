@@ -2,7 +2,6 @@
 layout: default
 title: mysql常用SQL
 parent: Database
-nav_order: 1
 ---
 
 # 1. mysql efficient shell

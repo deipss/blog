@@ -2,7 +2,6 @@
 layout: default
 title: gradle
 parent: Command
-nav_order: 3
 ---
 
 # 1. 命令

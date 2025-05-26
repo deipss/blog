@@ -2,7 +2,6 @@
 layout: default
 title: mysql锁与事务
 parent: Database
-nav_order: 1
 ---
 
 # 1. 锁

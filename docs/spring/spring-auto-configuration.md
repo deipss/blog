@@ -2,7 +2,6 @@
 layout: default
 title: spring-auto-configuration
 parent: Spring
-nav_order: 4
 ---
 
 # 1. 常用的注解

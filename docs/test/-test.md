@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Test 
-nav_order: 999
 has_children: true
 permalink: docs/test
 ---

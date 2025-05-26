@@ -2,7 +2,6 @@
 layout: default
 title: tools
 parent: Command
-nav_order: 8
 ---
 
 # 1. 装机

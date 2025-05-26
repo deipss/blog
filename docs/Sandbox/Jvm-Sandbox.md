@@ -2,7 +2,6 @@
 layout: default
 title: Java-Sandbox
 parent: Sandbox
-nav_order: 2
 ---
 
 # 1. 包结构

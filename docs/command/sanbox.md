@@ -2,7 +2,6 @@
 layout: default
 title: sandbox
 parent: Command
-nav_order: 7
 ---
 
 # 1. 快速开始

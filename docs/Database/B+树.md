@@ -2,7 +2,6 @@
 layout: default
 title: B+树
 parent: Database
-nav_order: 8
 ---
 
 # B+树

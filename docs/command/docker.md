@@ -2,7 +2,6 @@
 layout: default
 title: docker
 parent: Command
-nav_order: 2
 ---
 
 # 1. docker 安装

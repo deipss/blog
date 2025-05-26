@@ -2,7 +2,6 @@
 layout: default
 title: Object
 parent: Java
-nav_order: 3
 ---
 
 # 1. 基础类型

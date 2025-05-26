@@ -2,7 +2,6 @@
 layout: default
 title: idea
 parent: Command
-nav_order: 8
 ---
 
 ## 1. 编码提效

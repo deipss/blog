@@ -2,7 +2,6 @@
 layout: default
 title: Map
 parent: Java
-nav_order: 5
 ---
 
 # 1. Map

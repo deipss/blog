@@ -2,7 +2,6 @@
 layout: default
 title: 记一次jvm优化
 parent: Solution
-nav_order: 6
 ---
 
 # 1. 背景

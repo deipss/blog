@@ -2,7 +2,6 @@
 layout: default
 title: jvm_sandbox_repeater数据ES慢查询
 parent: Solution
-nav_order: 1
 ---
 
 # 1. 背景

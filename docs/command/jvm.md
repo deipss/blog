@@ -2,7 +2,6 @@
 layout: default
 title: jvm
 parent: Command
-nav_order: 3
 ---
 
 # 1. jps

@@ -2,7 +2,6 @@
 layout: default
 title: mysql
 parent: Database
-nav_order: 1
 ---
 
 # 1. 索引

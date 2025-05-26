@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Pattern 
-nav_order: 1024
 has_children: true
 permalink: docs/pattern
 ---

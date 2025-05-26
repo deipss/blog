@@ -2,7 +2,6 @@
 layout: default
 title: git
 parent: Command
-nav_order: 3
 ---
 
 # 0. 回退到某个节点，再强制push

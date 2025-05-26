@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Sandbox
-nav_order: 6
 has_children: true
 permalink: docs/Sandbox
 ---

@@ -2,7 +2,6 @@
 layout: default
 title: Transient
 parent: Java
-nav_order: 1
 ---
 
 # Transient关键字

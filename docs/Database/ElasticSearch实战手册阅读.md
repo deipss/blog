@@ -2,7 +2,6 @@
 layout: default
 title: ElasticSearch实战手册阅读
 parent: Database
-nav_order: 6
 ---
 
 # 1. index 设计优化

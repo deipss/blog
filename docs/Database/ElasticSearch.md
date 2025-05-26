@@ -2,7 +2,6 @@
 layout: default
 title: ElasticSearch
 parent: Database
-nav_order: 2
 ---
 
 # 1. ES集群常用命令

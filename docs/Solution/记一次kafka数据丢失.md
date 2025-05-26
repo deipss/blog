@@ -2,7 +2,6 @@
 layout: default
 title: 记一次kafka数据丢失
 parent: Solution
-nav_order: 8
 ---
 
 # 背景

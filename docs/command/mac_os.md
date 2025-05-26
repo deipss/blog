@@ -2,7 +2,6 @@
 layout: default
 title: mac os
 parent: Command
-nav_order: 10
 ---
 
 # 1. homebrew

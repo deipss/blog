@@ -2,7 +2,6 @@
 layout: default
 title: JUC
 parent: Java
-nav_order: 6
 ---
 
 # 1. Semaphore
