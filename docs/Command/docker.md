@@ -146,8 +146,8 @@ commit;
 select Host,User,plugin from mysql.user;
 ```
 
-- [使用docker运行mysql](https://www.cnblogs.com/limingxie/p/8655457.html) 
-- [2059错误](https://www.cnblogs.com/lifan1998/p/9177731.html) 
+- [使用docker运行mysql](https://www.cnblogs.com/limingxie/p/8655457.html)
+- [2059错误](https://www.cnblogs.com/lifan1998/p/9177731.html)
 - [2059错误](https://blog.csdn.net/ora_dy/article/details/80251487)
 
 ## 2.2. zookeeper kafka
@@ -270,7 +270,7 @@ services:
       ES_JAVA_OPTS: -Xmx512m -Xms512m
 volumes:
   es-data-es01: { }
-restart: 
+restart:
   always
 ```
 
@@ -321,8 +321,8 @@ docker run --name=main-zk  --restart=always  -e ALLOW_ANONYMOUS_LOGIN=yes  -p 21
 ```
 
 ## dubbo admin
-- git文档地址 https://github.com/apache/dubbo-admin?tab=readme-ov-file#12-run-with-docker
 
+- git文档地址 https://github.com/apache/dubbo-admin?tab=readme-ov-file#12-run-with-docker
 
 ```shell
 # 创建目录和文件 
