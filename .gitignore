@@ -1,27 +1,49 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
+HELP.md
+target/
+.mvn/
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Jekyll cache
-.jekyll-cache
-.jekyll-metadata
-_site
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# RubyGems
-*.gem
+### STS ###
+.DS_Store
+**/.flattened-pom.xml
 
-# NPM dependencies
-node_modules
-package-lock.json
-
-# IDE configurations
+### IntelliJ IDEA ###
 .idea
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-!.vscode/tasks.json
+.mvn
+*.iws
+*.iml
+*.ipr
 
-# Misc
-_sass/vendors
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle
+vendle/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
+### VS Code ###
+.vscode/
+
+### mvn ###
+mvnw
+mvnw.cmd
+test
