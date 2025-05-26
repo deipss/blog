@@ -200,3 +200,7 @@ Environment="OLLAMA_ORIGINS=*"
 [Install]
 WantedBy=multi-user.target
 ```
+
+
+
+{:toc}
