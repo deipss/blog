@@ -51,6 +51,7 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-sitemap (~> 1.4)
     json (2.9.1)
     just-the-docs (0.10.0)
       jekyll (>= 3.8.5)
