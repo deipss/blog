@@ -5,6 +5,14 @@ parent: Command
 nav_order: 3
 ---
 
+# 0. 回退到某个节点，再强制push
+
+```shell
+ git reset [revision number]
+ git push --force
+
+```
+
 # 1. 项目初始化
 
 git初始化的一些配置
@@ -98,9 +106,7 @@ git remote set-url origin https://gitee.com/xx/xx.git [新地址]
 
 ```shell
 git log
-
 ```
-
 
 # ignore
 
