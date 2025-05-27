@@ -1,7 +1,8 @@
 ---
 layout: default
 title: sandbox
-parent: Command
+parent: Net
+last_modified_date: 2021-05-07
 ---
 
 # 1. 快速开始

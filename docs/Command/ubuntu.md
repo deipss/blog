@@ -13,6 +13,7 @@ lscpu
 ```
 
 # 2. ubuntu systemctl
+
 ```shell
 # start with reboot
 systemctl enable nginx.service       
@@ -46,11 +47,13 @@ service <service-name> status
 
 ```
 
-在Ubuntu中，将应用程序添加为服务通常意味着你希望该程序能够在系统启动时自动运行，并且能够像其他服务一样通过`systemctl`命令进行管理（如启动、停止、重启等）。以下是将应用程序添加为Ubuntu服务的基本步骤：
+在Ubuntu中，将应用程序添加为服务通常意味着你希望该程序能够在系统启动时自动运行，并且能够像其他服务一样通过`systemctl`
+命令进行管理（如启动、停止、重启等）。以下是将应用程序添加为Ubuntu服务的基本步骤：
 
 ### 1. 创建服务文件
 
-首先，你需要为你的应用程序创建一个服务文件。这个文件应该放在`/etc/systemd/system/`目录下，文件名以`.service`结尾。例如，如果你想为名为`myapp`的应用程序创建服务文件，你可以将其命名为`myapp.service`。
+首先，你需要为你的应用程序创建一个服务文件。这个文件应该放在`/etc/systemd/system/`目录下，文件名以`.service`结尾。例如，如果你想为名为
+`myapp`的应用程序创建服务文件，你可以将其命名为`myapp.service`。
 
 服务文件的内容通常如下所示：
 
@@ -111,6 +114,7 @@ sudo systemctl status myapp.service
 以上就是在Ubuntu中将应用程序添加为服务的基本步骤。根据实际需求，你可能需要调整服务文件中的参数。
 
 # 4. ubuntu install jdk
+
 ```shell
 # 安装jdk8
 sudo apt install openjdk-8-jdk
@@ -123,7 +127,6 @@ export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 ```
- 
 
 # 5. ubuntu网络防火端设置信息
 
@@ -142,14 +145,14 @@ sudo ufw delete allow 23/tcp
 sudo ufw delete allow 80/tcp
 ```
 
-
 # 6. install v2ray
+
 - https://junz.org/post/v2_in_linux/
 
 # 7. install nvidia driver
+
 - https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-22-04
- 
 
 # 8. 系统环境
-  
+
 使用.profile文件作为环境变量的配置文件

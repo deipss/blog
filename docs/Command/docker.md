@@ -6,13 +6,81 @@ parent: Command
 
 # 1. docker 安装
 
-使用**1panel**管理docker
+## 1.1. 1panel
 
-## 1.1. install docker on ubuntu
+- URL_ADDRESS- https://www.1panel.cn/
+
+### 使用**1panel**管理docker,1pctl命令
+
+```shell
+Usage:
+  1pctl [COMMAND] [ARGS...]
+  1pctl --help
+
+Commands: 
+  status              查看 1Panel 服务运行状态
+  start               启动 1Panel 服务
+  stop                停止 1Panel 服务
+  restart             重启 1Panel 服务
+  uninstall           卸载 1Panel 服务
+  user-info           获取 1Panel 用户信息
+  listen-ip           切换 1Panel 监听 IP
+  version             查看 1Panel 版本信息
+  update              修改 1Panel 系统信息
+  reset               重置 1Panel 系统信息
+  restore             恢复 1Panel 服务及数据
+  
+deipss@deipss-All-Series:~$ whereis 1pctl
+1pctl: /usr/bin/1pctl /usr/local/bin/1pctl
+
+```
+
+### 1panel 文件保存在哪里？
+
+- 默认安装目录：1Panel 默认安装在/opt目录下，这里主要存放 1Panel 自身的二进制文件等。
+
+```shell
+/opt/1panel/apps
+/opt/1panel/backup
+/opt/1panel/cache
+/opt/1panel/db
+/opt/1panel/docker
+/opt/1panel/geo
+/opt/1panel/log
+/opt/1panel/mcp
+/opt/1panel/resource
+/opt/1panel/runtime
+/opt/1panel/tmp
+```
+
+- Docker 数据目录：1Panel 应用是容器化安装的，Docker 默认存储目录为`/var/lib/docker`，镜像、容器数据等通常保存在此目录下。如果手动迁移过
+  Docker 数据目录，比如迁移到了/www/docker，则相关数据会存储在新的目标位置。
+
+```shell
+/var/lib/docker/buildkit
+/var/lib/docker/containers
+/var/lib/docker/engine-id
+/var/lib/docker/image
+/var/lib/docker/network
+/var/lib/docker/overlay2
+/var/lib/docker/plugins
+/var/lib/docker/runtimes
+/var/lib/docker/swarm
+/var/lib/docker/tmp
+/var/lib/docker/volumes
+```
+
+- 应用存储目录：在使用 1Panel 部署应用时，不同应用可能有各自的存储路径配置。例如，若在 1Panel 中部署
+  WordPress，其文件可能保存在容器内的/var/www/html目录映射到宿主机的对应路径下。具体路径可在 1Panel 的应用管理界面或相关应用的配置文件中查看。
+- 备份文件目录：点击 1Panel 中【备份】按钮后，系统会在默认备份目录下生成备份文件，不过具体默认备份目录在不同环境中可能有所不同，一般可在
+  1Panel 的设置或文档中查找相关信息。另外，1Panel 支持将备份记录下载到本地，也支持添加阿里云 OSS、AWS S3 云存储、Minio
+  云原生对象存储和 SFTP 文件传输协议等第三方账号进行备份存储。
+
+## 1.2. install docker on ubuntu
 
 - https://docs.docker.com/engine/install/ubuntu/
 
-snap是ubuntu上的一个软件管理工具
+snap是ubuntu上的一个软件管理工具,可以通过**snap**进行安装
 
 ```shell
 sudo snap install docker         # version 20.10.24, or
@@ -21,7 +89,7 @@ sudo apt  install podman-docker  # version 3.4.4+ds1-1ubuntu1.22.04.2
 See 'snap info docker' for additional versions.
 ```
 
-## 1.2. install docker on centos
+## 1.3. install docker on centos
 
 ```shell
 #查看内核版本
@@ -36,7 +104,7 @@ sudo systemctl start docker
 sudo systemctl enable docker 
 ```
 
-## 1.3. 开启远程启动
+## 1.4. 开启远程启动
 
 - https://docs.docker.com/config/daemon/remote-access/
 
@@ -50,7 +118,7 @@ sudo systemctl restart docker.service
 sudo netstat -lntp | grep dockerd
 ```
 
-## 1.4. docker 加速
+## 1.5. docker 加速
 
 - 镜像加速：新版的Docker使用 /etc/docker/daemon.json
 
@@ -62,7 +130,7 @@ sudo netstat -lntp | grep dockerd
 }
 ```
 
-## 1.5. ubuntu snap install docker 后镜像加速
+## 1.6. ubuntu snap install docker 后镜像加速
 
 - https://programlife.net/2020/09/12/ubuntu-snap-docker-registry-mirrors/
 
@@ -71,7 +139,7 @@ sudo netstat -lntp | grep dockerd
 sudo systemctl list-units --type=service
 ```
 
-## 1.6. 查询docker镜像
+## 1.7. 查询docker镜像
 
 文档 https://hub.docker.com/
 
@@ -85,7 +153,7 @@ docker images
 docker imamges rm
 ```
 
-## 1.7. 容器启动
+## 1.8. 容器启动
 
 ```bash
 #虚拟内存设置大一点
@@ -98,7 +166,7 @@ docker run -p 6379:6379  -d redis redis-server --appendonly yes --restart=always
 docker update --restart=always 01a07d12cfec
 ```
 
-## 1.8. 删除未启动的容器
+## 1.9. 删除未启动的容器
 
 ```bash
 #删除容器
@@ -107,25 +175,25 @@ docker rm $( docker ps -a -q)
 docker rm $( docker images -a -q)
 ```
 
-## 1.9. 查看端口映射
+## 1.10. 查看端口映射
 
 ```shell
 docker port [容器id]
 ```
 
-## 1.10. 进行容器
+## 1.11. 进行容器
 
 ```shell
 docker exec -it [容器ID] /bin/bash
 ```
 
-## 1.11. 日志查看
+## 1.12. 日志查看
 
 ```shell
 docker logs -f bf08b7f2cd89
 ```
 
-## 1.12. 观测某个容器
+## 1.13. 观测某个容器
 
 ```shell
 docker inspect [容器ID]
@@ -320,7 +388,7 @@ docker pull bitnami/zookeeper:latest
 docker run --name=main-zk  --restart=always  -e ALLOW_ANONYMOUS_LOGIN=yes  -p 2181:2181  bitnami/zookeeper:latest 
 ```
 
-## dubbo admin
+## 2.9. dubbo admin
 
 - git文档地址 https://github.com/apache/dubbo-admin?tab=readme-ov-file#12-run-with-docker
 
