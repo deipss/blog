@@ -47,9 +47,9 @@ Ok,Let's Go……
   <!-- 在某个页面中显示 docs 目录的所有文件 -->
     <ul>
       {% assign sorted_pages = site.pages | where_exp:"page", "page.dir contains '/docs/'" | sort: "last_modified_date" | reverse %}
-  {% for page in sorted_pages limit:20 %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-  {% endfor %}
+        {% for page in sorted_pages limit:20 %}
+          <li>{{ page.last_modified_date }}</li><li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
     </ul>
 </div>
 --- 

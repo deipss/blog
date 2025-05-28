@@ -5,10 +5,11 @@
 }
 .home-posts li {
   margin-bottom: 0.5em;
+  margin-left: 10px;
 }
 .home-posts a {
   text-decoration: none;
-  color: #0366d6;
+  color: #FF0033;
 }
 .home-posts a:hover {
   text-decoration: underline;
