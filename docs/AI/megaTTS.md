@@ -11,7 +11,7 @@ last_modified_date: 2025-05-27
 
 > 使用时，上传的音频样例文件小于24s，文件中不要有空格
 
-# 安装
+# 1. 安装
 
 从GitHub克隆仓库：
 
@@ -59,7 +59,7 @@ docker run -it -p 7929:7929  megatts3:latest
 # Visit http://0.0.0.0:7929/ for gradio.
 ```
 
-# 推理
+# 2. 推理
 
 标准版
 
@@ -89,3 +89,44 @@ WebUI版
 # We also support cpu inference, but it may take about 30 seconds (for 10 inference steps).
 python tts/gradio_api.py
 ```
+
+> Gradio 是一个用于快速创建机器学习和数据科学模型交互界面的开源 Python 库。它允许开发者通过简单的 API 将模型包装成直观的
+> Web 界面，无需前端开发经验即可实现模型的可视化展示与交互测试。
+
+```python
+import gradio as gr
+
+
+def greet(name):
+    return "Hello " + name + "!"
+
+
+# 创建界面
+demo = gr.Interface(
+    fn=greet,  # 模型函数
+    inputs="text",  # 输入类型
+    outputs="text",  # 输出类型
+    title="Hello World Demo"  # 界面标题
+)
+if __name__ == '__main__':
+    api_interface = gr.Interface(fn=
+                                 greet,
+                                 inputs=[gr.Audio(type="filepath", label="Upload .wav"),
+                                         gr.File(type="filepath", label="Upload .npy"), "text",
+                                         gr.Number(label="infer timestep", value=32),
+                                         gr.Number(label="Intelligibility Weight", value=1.4),
+                                         gr.Number(label="Similarity Weight", value=3.0)],
+                                 outputs=[gr.Audio(label="Synthesized Audio")],
+                                 title="MegaTTS3",
+                                 description="Upload a speech clip as a reference for timbre, " +
+                                             "upload the pre-extracted latent file, " +
+                                             "input the target text, and receive the cloned voice.",
+                                 concurrency_limit=1)
+    api_interface.launch(server_name='0.0.0.0', server_port=7929, debug=True)
+    # 启动界面
+    demo.launch()
+
+```
+
+上述代码会创建下述的界面：fn= greet就是回调函数。
+![gradio_api.png](imgs/gradio_api.png)
