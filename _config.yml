@@ -86,6 +86,7 @@ kramdown:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-last-modified-at
 
 exclude:
   - "aa_temp.md"          # 排除匹配模式的文件
