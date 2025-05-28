@@ -3,7 +3,6 @@ layout: default
 title: adb
 parent: Mobile
 last_modified_date: 2025-05-25
-
 ---
 
 ## 1. 连接与退出

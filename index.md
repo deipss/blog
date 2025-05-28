@@ -46,11 +46,10 @@ Ok,Let's Go……
 <div class="home-posts">
   <!-- 在某个页面中显示 docs 目录的所有文件 -->
     <ul>
-      {% for page in site.pages %}
-        {% if page.dir == '/docs/' %}  <!-- 过滤 docs 目录 -->
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endif %}
-      {% endfor %}
+      {% assign sorted_pages = site.pages | where_exp:"page", "page.dir contains '/docs/'" | sort: "last_modified_date" | reverse %}
+  {% for page in sorted_pages limit:20 %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
     </ul>
 </div>
 --- 
