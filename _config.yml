@@ -83,16 +83,3 @@ plugins:
 
 exclude:
   - "aa_temp.md"          # 排除匹配模式的文件
-
-collections:
-  my_docs:
-    output: true
-    permalink: /:collection/:path/
-
-defaults:
-  - scope:
-      path: "docs"
-      type: my_docs
-    values:
-      layout: post  # 使用博客文章布局
-      is_post: true # 自定义标记，用于模板判断
