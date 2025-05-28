@@ -22,8 +22,10 @@ jobs:
           # Increment this number if you need to re-download cached gems
           cache-version: 5
 
-      - name: bundle set frozen
-        run: bundle config set frozen false
+      - name: rm Gemfile.lock
+        run: rm Gemfile.lock   # 删除锁文件
+      - name: bundle install
+        run: bundle install          # 重新生成锁文件
 
       - name: Build with Jekyll
         run: bundle exec jekyll build
