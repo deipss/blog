@@ -1,0 +1,15 @@
+/* assets/css/custom.css */
+.home-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+.home-posts li {
+  margin-bottom: 0.5em;
+}
+.home-posts a {
+  text-decoration: none;
+  color: #0366d6;
+}
+.home-posts a:hover {
+  text-decoration: underline;
+}
