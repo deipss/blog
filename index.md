@@ -34,10 +34,7 @@ Tu es là aussi.
 いらっしゃい。
 {: .label .label-red }
 
---- 
-Ok,Let's Go……
-
-![hello_world.gif](assets%2Fimages%2Fhello_world.gif)
+---
 
 # 欢迎来到我的博客
 
@@ -48,7 +45,7 @@ Ok,Let's Go……
     <ul>
       {% assign sorted_pages = site.pages | where_exp:"page", "page.dir contains '/docs/'" | sort: "last_modified_date" | reverse %}
         {% for page in sorted_pages limit:20 %}
-          <li>{{ page.last_modified_date }}</li><li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          <li>{{ page.last_modified_date }} - <a href="{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
