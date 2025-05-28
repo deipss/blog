@@ -19,13 +19,13 @@ nav_order: 1
 ---
 
 ¡Has venido!
-{:.label.label-blue }
+{:.label.label-purple }
 
 Tu es venu(e) !
-{:.label.label-pink }
+{:.label.label-yellow }
 
 Du bist gekommen!
-{:.label.label-orange }
+{:.label.label-red }
 
 你来啦！
 {: .label .label-black }
