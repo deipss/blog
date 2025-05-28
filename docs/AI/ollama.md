@@ -2,7 +2,7 @@
 layout: default
 title: ollama
 parent: AI
-last_modified_date: 2025-07-09
+last_modified_date: 2025-05-28
 ---
 
 # 1. ollama安装安装
