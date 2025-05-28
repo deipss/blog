@@ -2,6 +2,7 @@
 layout: default
 title: rocketmq面试
 parent: Spring
+last_modified_date: 2025-05-25
 ---
 
 1. 请简述RocketMQ的主要概念和特点。

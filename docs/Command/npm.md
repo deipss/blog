@@ -2,6 +2,7 @@
 layout: default
 title: npm
 parent: Command
+last_modified_date: 2025-05-25
 ---
 
 # 1. 安装 node

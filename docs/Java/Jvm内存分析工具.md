@@ -2,6 +2,7 @@
 layout: default
 title: Jvm内存分析
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 # 1. 使用以下命令进行dump java文件

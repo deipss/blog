@@ -2,6 +2,7 @@
 layout: default
 title: Transient
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 # Transient关键字

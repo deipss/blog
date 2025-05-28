@@ -2,6 +2,7 @@
 layout: default
 title: 记一次jvm优化
 parent: Solution
+last_modified_date: 2025-05-25
 ---
 
 # 1. 背景

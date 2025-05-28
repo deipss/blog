@@ -2,6 +2,7 @@
 layout: default
 title: JVM垃圾回收
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 # 1. 方法区

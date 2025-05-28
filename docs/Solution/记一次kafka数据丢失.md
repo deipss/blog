@@ -2,6 +2,7 @@
 layout: default
 title: 记一次kafka数据丢失
 parent: Solution
+last_modified_date: 2025-05-25
 ---
 
 # 背景

@@ -2,6 +2,7 @@
 layout: default
 title: Lock
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 # 1. synchronized的实现

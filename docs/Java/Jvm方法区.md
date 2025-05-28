@@ -2,6 +2,7 @@
 layout: default
 title: JVM方法区
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 

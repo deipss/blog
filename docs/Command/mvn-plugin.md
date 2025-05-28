@@ -2,6 +2,7 @@
 layout: default
 title: mvn plugin
 parent: Command
+last_modified_date: 2025-05-25
 ---
 
 # 常用的打包插件

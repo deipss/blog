@@ -2,6 +2,7 @@
 layout: default
 title: jvm
 parent: Command
+last_modified_date: 2025-05-25
 ---
 
 # 1. jps

@@ -2,6 +2,7 @@
 layout: default
 title: Selenium面试题
 parent: Test
+last_modified_date: 2025-05-25
 ---
 
 ## 1. 什么是Selenium，以及它在自动化测试中的作用是什么？

@@ -2,6 +2,7 @@
 layout: default
 title: JVM直接内存
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 

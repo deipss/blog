@@ -2,6 +2,7 @@
 layout: default
 title: mysql锁与事务
 parent: Database
+last_modified_date: 2025-05-25
 ---
 
 # 1. 锁

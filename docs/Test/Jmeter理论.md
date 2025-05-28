@@ -2,6 +2,7 @@
 layout: default
 title: Jmeter理论
 parent: Test
+last_modified_date: 2025-05-25
 ---
 
 ## 1. JMeter的工作原理是什么？

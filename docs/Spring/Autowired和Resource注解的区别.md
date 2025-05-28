@@ -2,6 +2,7 @@
 layout: default
 title: Autowired和Resource注解的区别
 parent: Spring
+last_modified_date: 2025-05-25
 ---
 
 ## 1. 相同点

@@ -2,6 +2,7 @@
 layout: default
 title: SpringContext
 parent: Spring
+last_modified_date: 2025-05-25
 ---
 
 # 1. ConfigurableApplicationContext的结构

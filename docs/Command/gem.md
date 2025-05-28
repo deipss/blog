@@ -2,6 +2,7 @@
 layout: default
 title: gem
 parent: Command
+last_modified_date: 2025-05-25
 ---
 
 # 1. ruby gem bundle 三者的关系

@@ -2,6 +2,7 @@
 layout: default
 title: spring-auto-configuration
 parent: Spring
+last_modified_date: 2025-05-25
 ---
 
 # 1. 常用的注解

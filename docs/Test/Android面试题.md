@@ -2,6 +2,7 @@
 layout: default
 title: Android
 parent: Test
+last_modified_date: 2025-05-25
 ---
 
 ## 1. 请解释Android中的四大基本组件是什么，以及它们的作用？

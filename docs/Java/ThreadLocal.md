@@ -2,6 +2,7 @@
 layout: default
 title: ThreadLocal
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 # 1. ThreadLocal

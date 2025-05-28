@@ -2,6 +2,7 @@
 layout: default
 title: spring-boot
 parent: Spring
+last_modified_date: 2025-05-25
 ---
 
 # 1. Auto Configuration

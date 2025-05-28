@@ -2,6 +2,7 @@
 layout: default
 title: mvn
 parent: Command
+last_modified_date: 2025-05-25
 ---
 
 - 图片来源=https://www.bilibili.com/video/BV1Ah411S7ZE?p=13&vd_source=f52d9488d7d3c21ed33580e4dce1a022

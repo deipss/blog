@@ -2,6 +2,7 @@
 layout: default
 title: Jvm内存溢出
 parent: Java
+last_modified_date: 2025-05-25
 ---
 
 # 1. 虚拟机栈与本地方法栈溢出

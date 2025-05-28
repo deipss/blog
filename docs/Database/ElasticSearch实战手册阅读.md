@@ -2,6 +2,7 @@
 layout: default
 title: ElasticSearch实战手册阅读
 parent: Database
+last_modified_date: 2025-05-25
 ---
 
 # 1. index 设计优化

@@ -2,6 +2,7 @@
 layout: default
 title: linux
 parent: Command
+last_modified_date: 2025-05-25
 ---
  
 

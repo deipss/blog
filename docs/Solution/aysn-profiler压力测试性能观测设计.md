@@ -2,6 +2,7 @@
 layout: default
 title: aysn-profiler压力测试性能观测设计
 parent: Solution
+last_modified_date: 2025-05-25
 ---
 
 # 1. 需求

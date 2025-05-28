@@ -2,6 +2,7 @@
 layout: default
 title: rocketmq
 parent: Spring
+last_modified_date: 2025-05-25
 ---
 
 # 1. rocket mq 各类角色
