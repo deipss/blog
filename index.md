@@ -44,14 +44,14 @@ Ok,Let's Go……
 这里是最新的 20 篇文章：
 
 <div class="home-posts">
-  <ul>
-    {% assign sorted_posts = site.posts | sort: 'last_modified_at' | reverse %}
-    {% for post in sorted_posts limit:20 %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.last_modified_at | date: "%Y-%m-%d" }}
-      </li>
-    {% endfor %}
-  </ul>
+  <!-- 在某个页面中显示 docs 目录的所有文件 -->
+    <ul>
+      {% for page in site.pages %}
+        {% if page.dir == '/docs/' %}  <!-- 过滤 docs 目录 -->
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
 </div>
 --- 
 
