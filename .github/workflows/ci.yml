@@ -20,7 +20,7 @@ jobs:
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
           # Increment this number if you need to re-download cached gems
-          cache-version: 4
+          cache-version: 5
 
       - name: bundle set frozen
         run: bundle config set frozen false
