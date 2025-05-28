@@ -40,6 +40,17 @@ Ok,Let's Go……
 
 ![hello_world.gif](assets%2Fimages%2Fhello_world.gif)
 
+
+<!-- 在首页显示最近 20 篇文章 -->
+<ul>
+  {% assign sorted_posts = site.posts | sort: 'last_modified_at' | reverse %}
+  {% for post in sorted_posts limit:20 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.last_modified_at | date: "%Y-%m-%d" }}
+    </li>
+  {% endfor %}
+</ul>
+
 --- 
 
 [ my github ](https://github.com/deipss){: .btn .btn-blue .float-right}
