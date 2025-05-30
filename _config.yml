@@ -65,6 +65,8 @@ just_the_docs:
   sort_by: alpha
   custom_css:
     - /assets/css/custom.css
+  show_toc: true
+
 
 
 # Footer content
