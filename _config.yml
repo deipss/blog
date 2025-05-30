@@ -63,6 +63,8 @@ back_to_top_text: "Back to top"
 
 just_the_docs:
   sort_by: alpha
+  custom_css:
+    - /assets/css/custom.css
 
 
 # Footer content

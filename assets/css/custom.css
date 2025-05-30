@@ -14,3 +14,17 @@
 .home-posts a:hover {
   text-decoration: underline;
 }
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.toc-sidebar {
+  width: 250px;
+  position: sticky;
+  top: 4rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-left: 1px solid #ddd;
+}
