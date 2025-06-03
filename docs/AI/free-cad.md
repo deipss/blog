@@ -2,7 +2,7 @@
 layout: default
 title: free-cad
 parent: AI
-last_modified_date:2025-06-03
+last_modified_date: 2025-06-03
 ---
 
 # free-cad
