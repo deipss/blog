@@ -1,6 +1,6 @@
 ---
 layout: default
-title: free-cad
+title: free cad
 parent: AI
 last_modified_date: 2025-06-03
 ---
