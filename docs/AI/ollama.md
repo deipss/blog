@@ -2,7 +2,7 @@
 layout: default
 title: ollama
 parent: AI
-last_modified_date: 2025-05-28
+last_modified_date: 2025-06-05
 ---
 
 # 1. ollama安装安装
@@ -99,7 +99,88 @@ WantedBy=multi-user.target
 
 # 2. 启用一个模型
 
-- ollama run deepseek-r1:7b
+> ollama run deepseek-r1:7b 
+默认是为启用端口11434，可以使用url访问：http://ip:11434
+
+- http://ip:11434/api/tags 获取所有模型
+
+以下代码是和ollama进行交互
+```python
+    def generate_text(self, prompt: str, model: str = "deepseek-r1:8b", options: Dict[str, Any] = None) -> Dict[
+        str, Any]:
+        """
+        使用Ollama服务生成文本。
+
+        :param prompt: 输入的提示文本
+        :param model: 使用的模型名称，默认为"deepseek-r1:8b"
+        :param options: 其他选项，如max_tokens等
+        :return: 包含生成文本的字典
+        :"stream": False  默认是True，会一点一点的返回结果，有多次返回，设置为False，则在一次返回所有结果
+        """
+        url = f"{self.base_url}/api/generate"
+        payload = {
+            "model": model,
+            "prompt": prompt,
+            "options": options or {},
+            "stream": False
+        }
+        response = requests.post(url, json=payload)
+        return response.json()
+```
+
+## 2.1. Ollama Commands
+
+```shell
+Large language model runner
+
+Usage:
+  ollama [flags]
+  ollama [command]
+
+Available Commands:
+  serve       Start ollama
+  create      Create a model from a Modelfile
+  show        Show information for a model
+  run         Run a model
+  stop        Stop a running model
+  pull        Pull a model from a registry
+  push        Push a model to a registry
+  list        List models
+  ps          List running models
+  cp          Copy a model
+  rm          Remove a model
+  help        Help about any command
+
+Flags:
+  -h, --help      help for ollama
+  -v, --version   Show version information
+
+Use "ollama [command] --help" for more information about a command.
+```
+
+在ubuntu中安装ollama后，后台服务一直是处于启动中状态，通过`nvidia-smi`查看时，发现长时间未调用接口，GPU就并未加载模型文件，当访问接口时，GPU加载模型文件，并开始运行。
+
+
+## models save path
+```shell
+/usr/share/ollama/.ollama/models/blobs$ du -sh *
+2.2G    sha256-05fc42664a9311c427413f9bf2077bd5ee7d59d6a5a034d54fc738f93976d065
+4.0K    sha256-0cb05c6e4e02614fa7f4c5d9ddcd5ae7e630e5df98602f1c0894ed0cacd11eeb
+4.0K    sha256-369ca498f347f710d068cbb38bf0b8692dd3fa30f30ca2ff755e211c94768150
+4.0K    sha256-40fb844194b25e429204e5163fb379ab462978a262b86aadd73d8944445c09fd
+4.0K    sha256-56bb8bd477a519ffa694fc449c2413c6f0e1d3b1c88fa7e3c9d88d3ae49d4dcb
+4.6G    sha256-6340dc3229b0d08ea9cc49b75d4098702983e17b4c096d57afbbf2ffc813f2be
+4.0K    sha256-6e4c38e1172f42fdbff13edf9a7a017679fb82b0fde415a3e8b3c31c6ed4a4e4
+4.0K    sha256-966de95ca8a62200913e3f8bfbf84c8494536f1b94b49166851e76644e966396
+4.4G    sha256-96c415656d377afbff962f6cdb2394ab092ccbcbaab4b82525bc4ca800fe8a49
+8.0K    sha256-a70ff7e570d97baaf4e62ac6e6ad9975e04caa6d900d3742d37698494479e0cd
+4.0K    sha256-a85fe2a2e58e2426116d3686dfdc1a6ea58640c1e684069976aa730be6c1fa01
+1.1G    sha256-aabd4debf0c8f08881923f2c25fc0fdeed24435271c2b3e92c4af36704040dbc
+4.0K    sha256-c5ad996bda6eed4df6e3b605a9869647624851ac248209d22fd5e2c0cc1121d3
+4.0K    sha256-e32efebd977975adfef79e5999f12ef9dac99d3cebe3eea09614e77ea2e3ef26
+4.0K    sha256-f4d24e9138dd4603380add165d2b0d970bef471fac194b436ebd50e6147c6588
+8.0K    sha256-fcc5a6bec9daf9b561a68827b67ab6088e1dba9d1fa2a50d7bbcc8384e0a265d
+```
 
 # 3. Ollama和Hugging Face
 
@@ -109,6 +190,7 @@ Ollama由开发者社区创建并维护，是一个开源项目。它基于Pytho
 Hugging Face是一家成立于2016年1月1日的开源人工智能创业公司，专注于NLP技术，总部位于美国纽约，CEO为Clément
 Delangue。它提供AI模型服务，有一系列预训练模型涉及多领域；构建了完整开源产品矩阵，涵盖自然语言处理库等；建立了AI开发生态，包含开发者社区等；还提供围绕NLP、Vision等方向的AI解决方案服务以获取费用。Hugging
 Face由其团队开发，其开源产品矩阵如自然语言处理库等是基于多种技术开发的，例如Transformer架构等，这些技术为其在自然语言处理等领域的发展提供了基础。其开发的模型则是基于大量的数据集和先进的机器学习算法进行训练的。
+
 
 ### 3.1. Ollama使用的技术及相关规范
 
