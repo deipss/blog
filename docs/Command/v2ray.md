@@ -8,6 +8,7 @@ last_modified_date: 2025-05-28
 
 # 1. 高级路由配套
 
+- 安装包 https://github.com/v2ray/v2ray-core/releases/ 
 - 教程 https://toutyrater.github.io/
 - 官方教程中文 https://www.v2fly.org/guide/workflow.html
 - 官方配置文档 https://www.v2fly.org/config/overview.html

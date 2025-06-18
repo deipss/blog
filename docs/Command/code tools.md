@@ -1,6 +1,6 @@
 ---
 layout: default
-title: tools
+title: 编码工具
 parent: Command
 last_modified_date: 2025-05-25
 ---

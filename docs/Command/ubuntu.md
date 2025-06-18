@@ -149,6 +149,7 @@ sudo ufw delete allow 80/tcp
 # 6. install v2ray
 
 - https://junz.org/post/v2_in_linux/
+- https://github.com/v2ray/v2ray-core/releases/
 
 # 7. install nvidia driver
 
