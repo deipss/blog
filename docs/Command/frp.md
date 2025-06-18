@@ -2,7 +2,7 @@
 layout: default
 title: frp
 parent: Command
-last_modified_date: 2025-05-25
+last_modified_date: 2025-06-18
 
 ---
 
@@ -45,7 +45,7 @@ remote_port = 11434
 
 - 启动脚本 nohup ./frpc -c frpc.ini > nohup.log 2>&1 &
 - 热更新 curl http://127.0.0.1:7400/api/reload
-- 配置文件
+- 配置文件参考
     - https://github.com/fatedier/frp/blob/dev/conf/frpc_full_example.toml
     - https://github.com/fatedier/frp/blob/773169e0c44070facd652c4b8b3fe6e6ff4d78f3/conf/legacy/frps_legacy_full.ini
 
