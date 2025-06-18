@@ -39,6 +39,7 @@ last_modified_date: 2025-05-29
 2. 选择已安装的JDK路径（需先自行安装JDK 11+）。
 3. 若没有检测到JDK，点击 **"Add JDK"** 并指定路径。
 
+![alt text](<img/vs jdk.png>)
 
 ### 2.4. **步骤4：识别项目结构**
 - **Maven项目**：VSCode会自动识别 `pom.xml` 文件并下载依赖。
