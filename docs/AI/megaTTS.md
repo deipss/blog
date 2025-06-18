@@ -2,7 +2,7 @@
 layout: default
 title: megaTTS
 parent: AI
-last_modified_date: 2025-05-27
+last_modified_date: 2025-06-17
 ---
 
 - https://github.com/bytedance/MegaTTS3
@@ -73,7 +73,8 @@ python tts/infer_cli.py --input_wav 'assets/English_prompt.wav' --input_text 'As
 ```
 
 口音版
-
+- https://drive.google.com/drive/folders/1gCWL1y_2xu9nIFhUX_OW5MbcFuB7J5Cl
+可以在面的谷歌云硬盘中，下载一些已有口音案例
 ```shell
 # When p_w (intelligibility weight) ≈ 1.0, the generated audio closely retains the speaker’s original accent. As p_w increases, it shifts toward standard pronunciation. 
 # t_w (similarity weight) is typically set 0–3 points higher than p_w for optimal results.

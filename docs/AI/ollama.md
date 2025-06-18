@@ -2,7 +2,7 @@
 layout: default
 title: ollama
 parent: AI
-last_modified_date: 2025-06-05
+last_modified_date: 2025-06-17
 ---
 
 # 1. ollama安装安装
@@ -106,26 +106,26 @@ WantedBy=multi-user.target
 
 以下代码是和ollama进行交互
 ```python
-    def generate_text(self, prompt: str, model: str = "deepseek-r1:8b", options: Dict[str, Any] = None) -> Dict[
-        str, Any]:
-        """
-        使用Ollama服务生成文本。
+def generate_text(self, prompt: str, model: str = "deepseek-r1:8b", options: Dict[str, Any] = None) -> Dict[
+    str, Any]:
+    """
+    使用Ollama服务生成文本。
 
-        :param prompt: 输入的提示文本
-        :param model: 使用的模型名称，默认为"deepseek-r1:8b"
-        :param options: 其他选项，如max_tokens等
-        :return: 包含生成文本的字典
-        :"stream": False  默认是True，会一点一点的返回结果，有多次返回，设置为False，则在一次返回所有结果
-        """
-        url = f"{self.base_url}/api/generate"
-        payload = {
-            "model": model,
-            "prompt": prompt,
-            "options": options or {},
-            "stream": False
-        }
-        response = requests.post(url, json=payload)
-        return response.json()
+    :param prompt: 输入的提示文本
+    :param model: 使用的模型名称，默认为"deepseek-r1:8b"
+    :param options: 其他选项，如max_tokens等
+    :return: 包含生成文本的字典
+    :"stream": False  默认是True，会一点一点的返回结果，有多次返回，设置为False，则在一次返回所有结果
+    """
+    url = f"{self.base_url}/api/generate"
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "options": options or {},
+        "stream": False
+    }
+    response = requests.post(url, json=payload)
+    return response.json()
 ```
 
 ## 2.1. Ollama Commands

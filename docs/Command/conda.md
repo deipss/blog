@@ -2,12 +2,10 @@
 layout: default
 title: conda
 parent: Command
-last_modified_date: 2025-05-25
+last_modified_date: 2025-06-18
 ---
 
-
-
-# 1. 安装环境
+## 1. 安装环境
 
 - 官方路径 ：https://docs.anaconda.com/free/anaconda/install/linux/
 - anaconda 的版本信息：https://repo.anaconda.com/archive/
@@ -31,13 +29,12 @@ source deactivate
 ```
 
 
-## 1.1. 北师大镜像
+## 2. 北师大镜像
 
 ```bash
   conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/main
   conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/r
   conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/msys2
-  
   
   conda config --remove channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/main
   conda config --remove channels https://mirrors.bfsu.edu.cn/anaconda/pkgs/r
@@ -47,7 +44,7 @@ source deactivate
 
 ```
 
-## 1.2. jupyter安装与远程登陆
+## 3. jupyter安装与远程登陆
 
 - 远程登陆参考文档 https://www.jianshu.com/p/8fc3cd032d3c
 
@@ -64,7 +61,3 @@ c.NotebookApp.port =7888 #可自行指定一个端口, 访问时使用该端口
 jupyter notebook
 
 ```
-
-
-
-

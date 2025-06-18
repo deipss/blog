@@ -10,3 +10,14 @@ last_modified_date: 2025-06-17
 以太坊、比特币
 
 hash和签名
+
+
+puzzle friendly
+target space
+work quality quantity
+proof of work
+nounce
+
+sha-256 secure hash algorithm
+
+open account : create public and private key 
