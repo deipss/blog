@@ -2,7 +2,7 @@
 layout: default
 title: linux
 parent: Command
-last_modified_date: 2025-05-25
+last_modified_date: 2025-06-18
 ---
  
 
@@ -79,7 +79,7 @@ cat（英文全拼：concatenate）命令用于连接文件并打印到标准输
 ```shell
 #把 textfile1 的文档内容加上行号后输入 textfile2 这个文档里：
 cat -n textfile1 > textfile2
-#把 textfile1 的文档内容加上行号后输入 textfile2 这个文档里：
+#读取 textfile1 和 textfile2 的内容，对非空行编号后，将内容追加到 textfile3 
 cat -b textfile1 textfile2 >> textfile3
 ```
 

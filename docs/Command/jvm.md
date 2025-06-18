@@ -16,7 +16,7 @@ jps -mlVv
 
 ## 2.1. 线程死锁
 
-- 使用 jstack -p `<pid>` > jstack1.txt 将当前的jvm执行栈打印
+- 使用 `jstack -p <pid> > jstack1.txt `将当前的jvm执行栈打印
 - 搜索 block状态的线程
 - 看被阻塞的线程是因为什么哪个锁被占用，造成的阻塞
 
