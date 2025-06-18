@@ -161,7 +161,7 @@ Use "ollama [command] --help" for more information about a command.
 在ubuntu中安装ollama后，后台服务一直是处于启动中状态，通过`nvidia-smi`查看时，发现长时间未调用接口，GPU就并未加载模型文件，当访问接口时，GPU加载模型文件，并开始运行。
 
 
-## models save path
+## 2.2. models save path
 ```shell
 /usr/share/ollama/.ollama/models/blobs$ du -sh *
 2.2G    sha256-05fc42664a9311c427413f9bf2077bd5ee7d59d6a5a034d54fc738f93976d065

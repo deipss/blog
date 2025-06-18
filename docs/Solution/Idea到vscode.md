@@ -74,4 +74,10 @@ last_modified_date: 2025-05-29
 
 > 很难一次性完全迁移到vscode，主是因为IDEA有许多的快捷方式可以生成代码，尤其是一个DAO、BO、TO的转换，在vscode中需要自己写代码。
 
+## maven的一些配置
+![alt text](<img/vs mvn.png>)
+mavne 工程的一些配置
+![alt text](<img/vs mvn2.png>)
+
+
 # 3. Python 工程
