@@ -2,7 +2,7 @@
 layout: default
 title: idea
 parent: Command
-last_modified_date: 2025-6-10
+last_modified_date: 2025-06-10
 ---
 
 ## 1. 编码提效
