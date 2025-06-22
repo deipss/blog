@@ -2,7 +2,7 @@
 layout: default
 title: mac os
 parent: Command
-last_modified_date: 2025-05-25
+last_modified_date: 2025-06-21
 ---
 
 # 1. homebrew
@@ -174,7 +174,7 @@ M系列的第三代产品，亦是Mac向苹果芯片迁移计划中的一部分�
 - logi optional 罗技鼠键
 
 
-# nmap
+# 5. nmap
 ```text
 (base) ➜  ~ nmap 192.168.1.0/24                           
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 21:04 CST
@@ -209,7 +209,7 @@ PORT     STATE SERVICE
 7000/tcp open  afs3-fileserver
 ```
 
-## principle
+## 5.1. principle
 - 主机发现（Host Discovery）
 确定目标主机是否在线。通过发送多种探测包（如ICMP、ARP、TCP SYN/ACK等），结合响应判断主机活跃状态。
 
@@ -240,15 +240,15 @@ ICMP Echo请求（Ping）
 - 脚本扫描（NSE, Nmap Scripting Engine）
 执行自定义脚本，进一步探测漏洞、配置错误或其他信息（如SSL证书、共享文件夹）。
 
-# oh my zsh
+# 6. oh my zsh
 Oh My Zsh 默认是基于 **Zsh**（Z Shell）的，它是为 Zsh 提供的一个开源框架，用于增强 Zsh 的功能和使用体验。
 
-### 简要说明：
+### 6.1. 简要说明：
 1. **Zsh** 是 Oh My Zsh 的基础 shell。
 2. Oh My Zsh 并不直接与 `sh` 或 `bash` 兼容，它专注于扩展 Zsh 的功能。
 3. 如果你安装了 Oh My Zsh，默认情况下你的终端会切换到 Zsh。
 
-### 如何确认当前使用的 shell？
+### 6.2. 如何确认当前使用的 shell？
 运行以下命令可以查看当前用户的默认 shell：
 ```bash
 echo $SHELL

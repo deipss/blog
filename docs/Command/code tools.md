@@ -5,16 +5,15 @@ parent: Command
 last_modified_date: 2025-05-25
 ---
 
-# 1. 装机
+# 1. 编码工具
 
-- awesome  https://github.com/jaywcjlove/awesome-mac 
+- awesome  https://github.com/jaywcjlove/awesome-mac
 
 ## 1.1. 办公
 
 - office 套装,使用WPS也可以
 - chrome
 - 腾讯电脑管家（安装jdk1.8）
-- feem 局域网数据传递 可以跨OS
 - Chocolatey windows的包管理工具
 
 ## 1.2. 编码
@@ -22,6 +21,7 @@ last_modified_date: 2025-05-25
 - idea
 - pyCharm
 - vscode
+- trae
 - notepad++
 - jet brain tool box
 
@@ -29,13 +29,17 @@ last_modified_date: 2025-05-25
 
 - mvn
 - git
+- node
+- python
 
 ## 1.4. 网络
 
 ### 1.4.1. windows
+
 - charles(抓包收费)  whistle（抓包免费）
 - MobaXterm 远程登陆
-- postman postwoman
+- ~~postman postwoman~~
+- hoppscotch
 - SwitchHosts (mac上是ihost)
 - tcpdump(linux上)
 - wiresharke 网络抓包解析
