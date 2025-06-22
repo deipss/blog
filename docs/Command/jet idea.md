@@ -1,8 +1,8 @@
 ---
 layout: default
-title: idea
+title: jet idea
 parent: Command
-last_modified_date: 2025-06-10
+last_modified_date: 2025-06-22
 ---
 
 ## 1. 编码提效
