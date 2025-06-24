@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Pattern 
+title: Web3 
 has_children: true
-permalink: docs/web3
+permalink: docs/Web3
 ---
 
-![pattern.jpg](img%2Fpattern.jpg)
+
+
+![web3.png](img/web3.png)
