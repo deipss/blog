@@ -1,7 +1,7 @@
 ---
 layout: default
 title: web3北大公开课-区块链
-parent: web3
+parent: Web3
 last_modified_date: 2025-06-17
 ---
 
