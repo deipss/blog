@@ -4,7 +4,6 @@ layout: home
 nav_order: 1
 ---
 
----
 
 ¡Has venido!
 {:.label.label-purple }
@@ -31,25 +30,25 @@ Tu es là aussi.
 {: .label .label-red }
 
 Ben arrivato!
-{: .label .label-blue } <!-- 意大利语 -->
+{: .label .label-blue }
 
 Você chegou!
-{: .label .label-black } <!-- 葡萄牙语（巴西/葡萄牙） -->
+{: .label .label-black }
 
 당신이 왔어요!
-{: .label .label-purple } <!-- 韩语（正式） -->
+{: .label .label-purple }
 
 आप आ गए!
-{: .label .label-yellow } <!-- 印地语 -->
+{: .label .label-yellow }
 
 Siz geldiniz!
-{: .label .label-black } <!-- 土耳其语 -->
+{: .label .label-black }
 
 Sen burada!
-{: .label .label-red } <!-- 阿尔巴尼亚语（口语化） -->
+{: .label .label-red }
 
 Anda di sini!
-{: .label .label-purple } <!-- 马来语 / 印尼语通用 -->
+{: .label .label-purple }
 
 ---
 
