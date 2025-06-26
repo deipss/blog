@@ -411,11 +411,11 @@ lsof	列出所有打开的文件（默认行为）。
 
 - https://www.runoob.com/linux/linux-comm-kill.html 菜鸟
 
-## 6.5. dmseg
+## 6.5. dmesg
 
 Linux dmesg（英文全称：display message）命令用于显示开机信息。
-- dmseg -t > dmseg1.log
-
+- dmesg -t > dmseg1.log
+- sudo dmesg --ctime
 dmesg 基本介绍
    全称：dmesg（display mesg，或 driver message）。
    作用：
