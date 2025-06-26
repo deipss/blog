@@ -1,12 +1,4 @@
 /* assets/css/custom.css */
-.home-posts ul {
-  list-style: none;
-  padding-left: 0;
-}
-.home-posts li {
-  margin-bottom: 0.5em;
-  margin-left: 10px;
-}
 .home-posts a {
   text-decoration: none;
   color: #FF0033;
@@ -27,4 +19,16 @@
   background: #f8f9fa;
   padding: 1rem;
   border-left: 1px solid #ddd;
+}
+
+.home-posts ul {
+    columns: 2;        /* 两列 */
+    column-gap: 2rem;  /* 列间距可选 */
+    list-style-type: none;
+    padding: 0;
+  }
+
+.home-posts li {
+    break-inside: avoid;  /* 避免单个 li 被拆开 */
+    margin-bottom: 0.5rem;
 }
