@@ -6,4 +6,4 @@ permalink: docs/Web3
 ---
 
 
- 
+![web3.png](img/web3.png) 
