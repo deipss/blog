@@ -50,6 +50,9 @@ Sen burada!
 Anda di sini!
 {: .label .label-purple }
 
+لقد أتيت!
+{: .label .label-orange }
+
 ---
 
 # Welcome to my blog
