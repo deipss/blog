@@ -253,3 +253,16 @@ OLLAMA_MAX_TOKENS=200 ollama run llama2
 
 ## 总结
 没有找到根本原因是什么，直接kill -9 相关的进程。
+
+
+| 功能                | 命令                                       |
+| ----------------- | ---------------------------------------- |
+| 查看全部日志            | `journalctl`                             |
+| 按时间排序（最新在下）       | `journalctl --reverse` 或 `journalctl -r` |
+| 只看今天的日志           | `journalctl --since today`               |
+| 从某时间开始看日志         | `journalctl --since "2025-06-26 08:00"`  |
+| 实时查看（像 `tail -f`） | `journalctl -f`                          |
+| 查看某个服务的日志         | `journalctl -u nginx.service`            |
+| 查看系统启动相关日志        | `journalctl -b`                          |
+| 查看上一次启动的日志        | `journalctl -b -1`                       |
+| 只看错误日志            | `journalctl -p err` 或 `journalctl -p 3`  |
