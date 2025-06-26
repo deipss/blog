@@ -8,8 +8,14 @@ nav_order: 1
 ¡Has venido!
 {:.label.label-purple }
 
+Ты пришел/пришла!
+{: .label .label-black }
+
 Tu es venu(e) !
 {:.label.label-yellow }
+
+Ελήθηκες!
+{: .label .label-blue }
 
 Du bist gekommen!
 {:.label.label-red }
@@ -22,6 +28,9 @@ Here you are .
 
 Ты здесь.
 {: .label .label-purple }
+
+Você chegou aqui!
+{: .label .label-green }
 
 Tu es là aussi.
 {: .label .label-yellow }
@@ -52,6 +61,8 @@ Anda di sini!
 
 لقد أتيت!
 {: .label .label-orange }
+
+
 
 ---
 
