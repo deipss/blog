@@ -4,17 +4,6 @@ layout: home
 nav_order: 1
 ---
 
-```text
- _    _                                                    
-| |  | |                                                   
-| |__| | ___ _ __ ___   _   _  ___  _   _    __ _ _ __ ___ 
-|  __  |/ _ \ '__/ _ \ | | | |/ _ \| | | |  / _` | '__/ _ \
-| |  | |  __/ | |  __/ | |_| | (_) | |_| | | (_| | | |  __/
-|_|  |_|\___|_|  \___|  \__, |\___/ \__,_|  \__,_|_|  \___|
-                         __/ |                             
-                        |___/                                                                           
-```
-
 ---
 
 ¡Has venido!
@@ -41,6 +30,27 @@ Tu es là aussi.
 いらっしゃい。
 {: .label .label-red }
 
+Ben arrivato!
+{: .label .label-blue } <!-- 意大利语 -->
+
+Você chegou!
+{: .label .label-black } <!-- 葡萄牙语（巴西/葡萄牙） -->
+
+당신이 왔어요!
+{: .label .label-purple } <!-- 韩语（正式） -->
+
+आप आ गए!
+{: .label .label-yellow } <!-- 印地语 -->
+
+Siz geldiniz!
+{: .label .label-black } <!-- 土耳其语 -->
+
+Sen burada!
+{: .label .label-red } <!-- 阿尔巴尼亚语（口语化） -->
+
+Anda di sini!
+{: .label .label-purple } <!-- 马来语 / 印尼语通用 -->
+
 ---
 
 # Welcome to my blog
@@ -48,7 +58,6 @@ Tu es là aussi.
 recent posts:
 
 <div class="home-posts">
-  <!-- 在某个页面中显示 docs 目录的所有文件 -->
     <ul>
       {% assign sorted_pages = site.pages | where_exp:"page", "page.dir contains '/docs/'" | sort: "last_modified_date" | reverse %}
         {% for page in sorted_pages limit:20 %}
@@ -58,9 +67,16 @@ recent posts:
 </div>
 --- 
 
-[ my github ](https://github.com/deipss){: .btn .btn-blue .float-right}
-
-
+```text
+ _    _                                                    
+| |  | |                                                   
+| |__| | ___ _ __ ___   _   _  ___  _   _    __ _ _ __ ___ 
+|  __  |/ _ \ '__/ _ \ | | | |/ _ \| | | |  / _` | '__/ _ \
+| |  | |  __/ | |  __/ | |_| | (_) | |_| | | (_| | | |  __/
+|_|  |_|\___|_|  \___|  \__, |\___/ \__,_|  \__,_|_|  \___|
+                         __/ |                             
+                        |___/                                                                           
+```
 
 
 

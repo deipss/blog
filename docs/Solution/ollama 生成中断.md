@@ -248,3 +248,8 @@ OLLAMA_MAX_TOKENS=200 ollama run llama2
 |------------------------|--------------|------------------|---------------|
 | 限制生成的新 token 数量        | `max_tokens` | `max_new_tokens` | `num_predict` |
 | 限制总 token（prompt + 生成） | 不直接支持        | `max_length`     | ❌不支持          |
+
+
+
+## 总结
+没有找到根本原因是什么，直接kill -9 相关的进程。
