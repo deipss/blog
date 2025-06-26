@@ -91,7 +91,6 @@ deipss@deipss-All-Series:/****news$ journalctl -u ollama --no-pager | grep "26 0
 6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - kv  23:            tokenizer.ggml.padding_token_id u32              = 128001
 6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - kv  24:               tokenizer.ggml.add_bos_token bool             = true
 6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - kv  25:               tokenizer.ggml.add_eos_token bool             = false
-6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - kv  26:                    tokenizer.chat_template str              = {% if not add_generation_prompt is de...
 6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - kv  27:               general.quantization_version u32              = 2
 6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - type  f32:   66 tensors
 6月 26 04:34:00 deipss-All-Series ollama[1073]: llama_model_loader: - type q4_K:  193 tensors
