@@ -150,10 +150,7 @@ build/
 
 ### VS Code ###
 .vscode/
-
 logs/
-
-
 *.versionsBackup
 
 ```

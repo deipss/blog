@@ -30,7 +30,10 @@ last_modified_date: 2025-05-25
 - mvn
 - git
 - node
+  - npm
+  - cnpm
 - python
+  - pip
 
 ## 1.4. 网络
 
@@ -39,7 +42,7 @@ last_modified_date: 2025-05-25
 - charles(抓包收费)  whistle（抓包免费）
 - MobaXterm 远程登陆
 - ~~postman postwoman~~
-- hoppscotch
+- hoppscotch 用来代替postman的
 - SwitchHosts (mac上是ihost)
 - tcpdump(linux上)
 - wiresharke 网络抓包解析

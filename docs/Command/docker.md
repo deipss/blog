@@ -33,7 +33,6 @@ Commands:
   
 deipss@deipss-All-Series:~$ whereis 1pctl
 1pctl: /usr/bin/1pctl /usr/local/bin/1pctl
-
 ```
 
 ### 1panel 文件保存在哪里？
@@ -182,7 +181,7 @@ docker rm $( docker images -a -q)
 docker port [容器id]
 ```
 
-## 1.11. 进行容器
+## 1.11. 进入容器内部
 
 ```shell
 docker exec -it [容器ID] /bin/bash
@@ -428,7 +427,8 @@ Docker 构建的早期需要 DockerFile，就是 Docker 构建了一个命令文
 5）VOLUME 指定容器访问目录
 6）WORKDIR 运行目录
 7）ENV 环境变量，如 ENV LANG en_US.UTF-8
-8）CMD 容器执行的命令 CMD "echo" "Hello docker!" 9）ADD 复制文件到目标文件夹
+8）CMD 容器执行的命令 CMD "echo" "Hello docker!" 
+9）ADD 复制文件到目标文件夹
 10）COPY 复制，类似 ADD
 11）EXPOSE 暴露端口
 12）ENTRYPOINT 入口，命令，只有一个不能被 Run 覆盖

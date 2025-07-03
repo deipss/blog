@@ -4,11 +4,10 @@ title: linux
 parent: Command
 last_modified_date: 2025-06-18
 ---
- 
 
 # 1. log
 
-- [https://cloud.tencent.com/developer/article/1579977](https://cloud.tencent.com/developer/article/1579977)
+- [Linux 6种日志查看方法](https://cloud.tencent.com/developer/article/1579977)
 
 ## 1.1. tail
 
@@ -189,8 +188,10 @@ tshark tcpdump的高级版本
 ```shell
 netstat -s | egrep "listen|LISTEN" 
 netstat -s | grep -i "listen"
-netstat -at 查询所有tcp的连接，可用于服务启动后的端口查看，是否启动了kafka，dubbo等
-netstat -nap | grep port 将会显示使用该端口的应用程序的进程 id
+# 查询所有tcp的连接，可用于服务启动后的端口查看，是否启动了kafka，dubbo等
+netstat -at 
+# 将会显示使用该端口的应用程序的进程 id
+netstat -nap | grep port 
 netstat -g 将会显示该主机订阅的所有多播网络。
 ```
 
@@ -205,7 +206,6 @@ traceroute baidu.com
 ```bash
 ss -int
 ```
- 
 
 ## 3.7. 内网穿透
 
@@ -232,7 +232,8 @@ df -h /
 du * sh 
 ```
 
-## 4.3. cpu memory disk
+## 4.3. show information of cpu memory disk
+
 ```shell
 lshw -class memory
 lshw -class cpu
@@ -249,73 +250,66 @@ lshw -class disk
 
 ```shell
 export PATH=/home/uusama/mysql/bin:$PATH
-
 # 或者把PATH放在前面
 export PATH=$PATH:/home/uusama/mysql/bin
-
+```
 
 生效时间：立即生效
 生效期限：当前终端有效，窗口关闭后无效
 生效范围：仅对当前用户有效
 配置的环境变量中不要忘了加上原来的配置，即$PATH部分，避免覆盖原来配置
-```
 
 ### 5.1.2. Linux环境变量配置方法二：vim ~/.bashrc
 
 ```shell
 vim ~/.bashrc
-
 # 在最后一行加上
 export PATH=$PATH:/home/uusama/mysql/bin
-
+```
 
 生效时间：使用相同的用户打开新的终端时生效，或者手动source ~/.bashrc生效
 生效期限：永久有效
 生效范围：仅对当前用户有效
 如果有后续的环境变量加载文件覆盖了PATH定义，则可能不生效
-```
 
 ### 5.1.3. Linux环境变量配置方法三：vim ~/.bash_profile
 
 ```shell
 和修改~/.bashrc文件类似，也是要在文件最后加上新的路径即可：
-
 vim ~/.bash_profile
-
 # 在最后一行加上
 export PATH=$PATH:/home/uusama/mysql/bin
+```
+
 注意事项：
 
 生效时间：使用相同的用户打开新的终端时生效，或者手动source ~/.bash_profile生效
 生效期限：永久有效
 生效范围：仅对当前用户有效
 如果没有~/.bash_profile文件，则可以编辑~/.profile文件或者新建一个
-```
 
 ### 5.1.4. Linux环境变量配置方法四：vim /etc/bashrc
 
 ```shell
-该方法是修改系统配置，需要管理员权限（如root）或者对该文件的写入权限：
 
 # 如果/etc/bashrc文件不可编辑，需要修改为可编辑
 chmod -v u+w /etc/bashrc
-
 vim /etc/bashrc
-
 # 在最后一行加上
 export PATH=$PATH:/home/uusama/mysql/bin
-注意事项：
 
+```
+
+该方法是修改系统配置，需要管理员权限（如root）或者对该文件的写入权限：
+
+注意事项：
 生效时间：新开终端生效，或者手动source /etc/bashrc生效
 生效期限：永久有效
 生效范围：对所有用户有效
 
-```
-
 ### 5.1.5. Linux环境变量配置方法五：vim /etc/profile
 
 ```shell
-该方法修改系统配置，需要管理员权限或者对该文件的写入权限，和vim /etc/bashrc类似：
 
 # 如果/etc/profile文件不可编辑，需要修改为可编辑
 chmod -v u+w /etc/profile
@@ -324,12 +318,14 @@ vim /etc/profile
 
 # 在最后一行加上
 export PATH=$PATH:/home/uusama/mysql/bin
+```
+
+该方法修改系统配置，需要管理员权限或者对该文件的写入权限，和vim /etc/bashrc类似：
 注意事项：
 
 生效时间：新开终端生效，或者手动source /etc/profile生效
 生效期限：永久有效
 生效范围：对所有用户有效
-```
 
 ## 5.2. 环境变量分类
 
@@ -376,15 +372,18 @@ ps -auf
 ps -L <pid>
 ```
 
-## 6.3. lsof 
+## 6.3. lsof
+
 (list open files)列出当前系统打开文件，显示系统中所有进程打开的文件和网络连接，包括普通文件、目录、设备、网络端口等。
 适用场景：
+
 - 查找占用特定端口的进程。
 - 检测文件被哪些进程占用（如卸载文件系统前检查）。
 - 分析网络连接状态。
 - 调试程序资源占用问题。
 
 参数功能:
+
 ```shell
 
 lsof	列出所有打开的文件（默认行为）。
@@ -403,28 +402,146 @@ lsof	列出所有打开的文件（默认行为）。
 
 ```
 
+在 Unix/Linux 中，“一切皆文件”，所以它不仅能查文件，还能查：
+
+* 打开的普通文件
+* 使用的网络端口和套接字
+* 设备（如磁盘）
+* 管道和匿名文件
+* 正在使用某个库、目录的进程
+
+---
+
+### 🧠 基本语法
+
+```bash
+lsof [选项] [文件名 / 端口 / 进程号等]
+```
+
+### 🔍 查看某个文件被哪个进程占用
+
+```bash
+lsof /path/to/file
+```
+
+### 🔍 查某个端口被哪个进程占用
+
+```bash
+lsof -i :8080
+```
+
+> 输出类似：
+
+```
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java     1234 user   45u  IPv6 123456      0t0  TCP *:http-alt (LISTEN)
+```
+
+### 🔍 列出某个进程打开的所有文件
+
+```bash
+lsof -p 1234
+```
+
+### 🔍 查某个用户的打开文件
+
+```bash
+lsof -u username
+```
+
+### 🔍 查看所有网络连接（TCP/UDP）
+
+```bash
+lsof -i
+```
+
+### 🔍 显示正在监听的端口
+
+```bash
+lsof -i -sTCP:LISTEN
+```
+
+### 🔍 查某个程序名的所有打开文件
+
+```bash
+lsof -c nginx
+```
+
+---
+
+## 6.4. 🔐 权限问题
+
+`lsof` 对其他用户的进程有限制。要看到完整信息通常需要 `sudo`：
+
+```bash
+sudo lsof -i :80
+```
+
+---
+
+## 🧩 进阶技巧
+
+### 🔍 查哪些进程使用了某个挂载点（如 `/mnt/usb`）
+
+```bash
+lsof +D /mnt/usb
+```
+
+（递归查目录）
+
+---
+
+### 6.4.1. 🧹 卸载设备前查是否被占用
+
+```bash
+lsof | grep /dev/sdb1
+```
+
+---
+
+### 💥 查杀占用端口的进程（如 8080）
+
+```bash
+sudo kill -9 $(sudo lsof -t -i :8080)
+```
+
+---
+
+## 6.5. 📄 输出字段说明
+
+| 列       | 含义                                           |
+|---------|----------------------------------------------|
+| COMMAND | 打开文件的进程名                                     |
+| PID     | 进程 ID                                        |
+| USER    | 进程所有者                                        |
+| FD      | 文件描述符，如 `cwd`（当前目录）、`txt`（可执行代码）、`mem`（内存映射） |
+| TYPE    | 文件类型，如 REG（普通文件）、DIR、CHR（字符设备）、IPv4          |
+| NAME    | 文件名或网络地址                                     |
+
+---
+
 ## 6.4. kill
 
-
-- kill -9 PID	SIGKILL	9	强制终止进程，立即结束进程，不给进程任何清理机会。
-- kill -15 PID	SIGTERM	15	请求进程优雅退出，允许进程自行清理资源后再终止。
+- kill -9 PID SIGKILL 9 强制终止进程，立即结束进程，不给进程任何清理机会。
+- kill -15 PID SIGTERM 15 请求进程优雅退出，允许进程自行清理资源后再终止。
 
 - https://www.runoob.com/linux/linux-comm-kill.html 菜鸟
 
 ## 6.5. dmesg
 
 Linux dmesg（英文全称：display message）命令用于显示开机信息。
+dmesg 基本介绍
+全称：dmesg（display mesg，或 driver message）。
+作用：显示或控制 内核环形缓冲区（kernel ring buffer）中的信息，包括系统启动时的硬件检测、驱动加载、内核事件以及运行时的错误和警告。
+
 - dmesg -t > dmseg1.log
 - sudo dmesg --ctime
-dmesg 基本介绍
-   全称：dmesg（display mesg，或 driver message）。
-   作用：
-   - 显示或控制 内核环形缓冲区（kernel ring buffer）中的信息，包括系统启动时的硬件检测、驱动加载、内核事件以及运行时的错误和警告。
-   
+
 适用场景：
-   - 排查硬件或驱动问题（如设备未识别、驱动冲突）。
-   - 分析系统启动失败或崩溃原因。
-   - 实时监控内核日志（如调试新硬件或内核模块）。
+
+- 排查硬件或驱动问题（如设备未识别、驱动冲突）。
+- 分析系统启动失败或崩溃原因。
+- 实时监控内核日志（如调试新硬件或内核模块）。
 
 # 7. 其他
 
@@ -432,16 +549,15 @@ dmesg 基本介绍
 
 ```shell
 nohup /root/runoob.sh > runoob.log 2>&1 &
-# 2>&1 解释：
-# 将标准错误 2 重定向到标准输出 &1 ，标准输出 &1 再被重定向输入到 runoob.log 文件中。
-# 0 – stdin (standard input，标准输入)
-# 1 – stdout (standard output，标准输出)
-# 2 – stderr (standard error，标准错误输出)
+# 7. 2>&1 解释：
+# 8. 将标准错误 2 重定向到标准输出 &1 ，标准输出 &1 再被重定向输入到 runoob.log 文件中。
+# 9. 0 – stdin (standard input，标准输入)
+# 10. 1 – stdout (standard output，标准输出)
+# 11. 2 – stderr (standard error，标准错误输出)
 
 nohup sh -c 'pip install -r /home/deipss/jupyter_files/ComfyUI/requirements.txt' > runoob.log 2>&1 &
 sh -c 相当于把后面一个字符串，当作一个sh命令执行
 ```
-
 
 # 8. sh bash zsh ksh 的区别
 
@@ -462,9 +578,7 @@ zsh提供了更好的交互式体验和可定制性，因此通常被高级用�
 ksh（Korn Shell）：ksh是由AT&T Bell实验室开发的一个强大的shell。
 它继承了Bourne Shell和C Shell的特性，并添加了一些自己的扩展功能，如命令别名、编辑命令行和作业控制等。
 ksh在Unix系统中使用较为广泛，特别是在商业环境中。
-
 ```
-
 
 # 9. cpu npu gpu 的区别
 

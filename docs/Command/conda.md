@@ -4,6 +4,7 @@ title: conda
 parent: Command
 last_modified_date: 2025-06-18
 ---
+# conda
 
 ## 1. 安装环境
 
@@ -60,4 +61,63 @@ c.NotebookApp.port =7888 #可自行指定一个端口, 访问时使用该端口
 
 jupyter notebook
 
+```
+
+## conda如何迁移所有环境
+
+```text
+#!/bin/bash
+
+source /home/deipss/anaconda3/etc/profile.d/conda.sh
+for env in $(conda env list | awk '{print $1}' | grep -v "#" | grep -v "^$" | grep -v "base"); do
+
+    echo $env   
+    conda activate $env
+
+    conda env export --no-builds > ${env}.yml
+done
+~          
+```
+
+conda activate本身不是CLI的一个命令，所以直接使用conda activate是会报错的，要先使用source将conda.sh将以下的脚本
+的执行到当前的shell环境中
+
+> 在当前 Shell 环境中执行一个 shell 脚本的内容
+```text
+
+__conda_activate() {
+    if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+__conda_reactivate() {
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix reactivate)" || \return
+    \eval "$ask_conda"
+    __conda_hashr
+}
+
+conda() {
+    \local cmd="${1-__missing__}"
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@"
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return
+            __conda_reactivate
+            ;;
+        *)
+            __conda_exe "$@"
+            ;;
+    esac
+}
 ```

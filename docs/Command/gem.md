@@ -10,11 +10,9 @@ last_modified_date: 2025-06-18
 - ruby的安装和使用：brew install ruby
 
 ```log
-
-(base) ➜  blog git:(main) brew list | grep ruby
+brew list | grep ruby
 chruby
 ruby-install
-
 ```
 
 - gem的安装和使用： brew install rubygems
