@@ -1,0 +1,27 @@
+---
+layout: default
+title: MCP
+parent: AI
+last_modified_date: 2025-07-08
+---
+
+# MCP的理论
+
+Model Context Protocol
+
+- [official website](https://modelcontextprotocol.io/introduction)
+- [examples](https://modelcontextprotocol.io/examples)
+- [github](https://github.com/modelcontextprotocol)
+
+## 与AI agent的区别，解决了AI agent的什么问题
+
+
+## MCP如何和LLM协同工作的
+
+
+
+
+# MCP的使用
+
+
+# MCP的实现

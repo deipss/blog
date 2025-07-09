@@ -2,7 +2,7 @@
 layout: default
 title: frp
 parent: Command
-last_modified_date: 2025-06-18
+last_modified_date: 2025-07-09
 
 ---
 
@@ -41,7 +41,7 @@ local_ip = 127.0.0.1
 local_port = 11434
 remote_port = 11434
 ```
-
+> 注意，当多台client时，[ssh]这类的服务名，要不同，可以用类似[ssh-2]
 - 启动脚本 nohup ./frpc -c frpc.ini > nohup.log 2>&1 &
 - 热更新 curl http://127.0.0.1:7400/api/reload
 - 配置文件参考
