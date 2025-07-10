@@ -151,6 +151,14 @@ sudo ufw delete allow 80/tcp
 - https://junz.org/post/v2_in_linux/
 - https://github.com/v2ray/v2ray-core/releases/
 
+```text
+#export ALL_PROXY="socks5://127.0.0.1:10808"
+#export http_proxy="http://127.0.0.1:10809"
+
+curl -x socks5://127.0.0.1:10808 https://www.google.com -v
+curl -x socks5://127.0.0.1:10808 -L -o v2ray-macos-arm64-v8a.zip https://github.com/v2fly/v2ray-core/releases/download/v5.29.3/v2ray-macos-arm64-v8a.zip
+```
+
 # 7. install nvidia driver
 
 - https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-22-04

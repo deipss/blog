@@ -6,7 +6,9 @@ last_modified_date: 2025-07-09
 ---
 
 # 1. 背景
+
 一台Ubuntu主机在凌晨突然关机，`journalctl -b -1`最后一条日志如下：
+
 ```text
 7月 09 04:54:01 deipss-ubuntu-2022 sshd[83328]: Invalid user appltest from 127.0.0.1 port 43472
 7月 09 04:54:01 sshd: pam_unix(sshd:auth): check pass; user unknown
@@ -14,16 +16,11 @@ last_modified_date: 2025-07-09
 
 `journalctl | grep -iE "power|shutdown|crash|reboot"` and `dmesg -T | less` not provide some information with shutdown.
 
-
-
-
 # 2. 分析过程
+
 `journalctl -b -1` provide information as followed, it is import to find reason what crack my computer.
-So that `journalctl -b -1 | grep "Failed password"` is ran, 
+So that `journalctl -b -1 | grep "Failed password"` is ran,
 We found that the malicious cracking attack started at 23:16 on July 7th.
-
-
-
 
 ```text
  ~ journalctl -b -1 | grep 'Failed p'     
@@ -48,8 +45,28 @@ We found that the malicious cracking attack started at 23:16 on July 7th.
 7月 09 04:53:51 deipss-ubuntu-2022 sshd[83324]: Failed password for root from 127.0.0.1 port 52668 ssh2
 7月 09 04:54:00 deipss-ubuntu-2022 sshd[83326]: Failed password for root from 127.0.0.1 port 52674 ssh2
 ```
+
+虽然不敢确认关机是否与这个病毒有关，但病毒的问题要比突然关机严重的多
+
 # 3. 解决办法
 
+## fail2ban
 
+Fail2Ban 可以禁止本地回环地址（127.0.0.1），但默认不会封禁 127.0.0.1，因为：
+
+这是回环地址，通常视为“可信”来源；
+
+它被列入了默认的 ignoreip 白名单中
+
+## 使用 UFW 禁止非必要的本地连接
+
+如果你不需要从本地其他容器或用户 SSH 到 root，可以：
+
+```text
+sudo ufw enable
+sudo ufw deny in from 127.0.0.1 to any port 22
+```
+
+⚠️ 注意别把自己锁死，可以在配置好 SSH key 和普通用户 sudo 后操作。
 
 # 4. 参考资料
