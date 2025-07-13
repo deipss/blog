@@ -4,7 +4,6 @@ layout: home
 nav_order: 1
 ---
 
-# Welcome to my blog
 ¡Has venido!
 {:.label.label-red }
 
@@ -62,8 +61,7 @@ Anda di sini!
 لقد أتيت!
 {: .label .label-orange }
 
----
-recent posts:
+### recent posts:
 <div class="home-posts two-column-wrapper" style="display:flex; gap:2em;">
   <ul>
     {% assign sorted_pages = site.pages | where_exp:"page", "page.dir contains '/docs/'" | sort: "last_modified_date" | reverse %}
