@@ -22,11 +22,4 @@ permalink: docs/net
                ||   Firewall ||          |____________|
                 '============'
 
-                   <---> TCP/IP Stack
-                   <---> HTTP / HTTPS
-                   <---> WebSocket / MQTT
-                   <---> gRPC / RPC
-
-         "Connecting the world, one packet at a time."
-
 ```
