@@ -69,11 +69,15 @@ Anda di sini!
 # Welcome to my blog
 
 recent posts:
-
-<div class="home-posts">
+<div class="home-posts two-column-wrapper" style="display:flex; gap:2em;">
   <ul>
     {% assign sorted_pages = site.pages | where_exp:"page", "page.dir contains '/docs/'" | sort: "last_modified_date" | reverse %}
-    {% for page in sorted_pages limit:20 %}
+    {% for page in sorted_pages limit:15 %}
+      <li>{{ page.last_modified_date }} - <a href="/blog{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul>
+    {% for page in sorted_pages offset:15 limit:15 %}
       <li>{{ page.last_modified_date }} - <a href="/blog{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
   </ul>
