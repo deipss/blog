@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JUC
+title: JUC Using
 parent: Java
 last_modified_date: 2025-05-25
 ---
@@ -96,7 +96,7 @@ public class SemaphoreDemo {
 - https://leetcode-cn.com/problems/building-h2o/
 - https://www.cnblogs.com/dolphin0520/p/3920373.html
 
-当共享变量被一个线程修改后，会立即通过其他线程。 
+当共享变量被一个线程修改后，会立即通过其他线程。
 volatile有利于保证变量的原子性，对于i++这样的复合操作在高并发的情况下不行。
 在Thread类中，线程名字段就是用volatile修饰的。
 

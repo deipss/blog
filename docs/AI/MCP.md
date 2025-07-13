@@ -18,6 +18,7 @@ Model Context Protocol
 
 ## MCP如何和LLM协同工作的
 
+双方是如果通信的，代码是什么
 
 
 

@@ -8,7 +8,7 @@ last_modified_date: 2025-05-25
 
 # 1. ubuntu show version
 
-```shell
+```shellg
 lsb_release -a
 lscpu
 ```

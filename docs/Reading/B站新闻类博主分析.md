@@ -31,7 +31,7 @@ last_modified_date: 2025-06-29
 
 ## 各平台的审核制度
 
-快手是比较严格的
+快手是比较严格的，**快手直接把账号封禁了**
 ![img.png](img/fasthand.png)
 
 小红书一般
@@ -40,7 +40,7 @@ B站没有快手那么严格
 
 ![img.png](img/b-size-1.png)
 
-抖音的强度和B站差不多
+抖音的强度和快手差不多
 
 ![img.png](img/douyin-1.png)
 
