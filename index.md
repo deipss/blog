@@ -6,7 +6,7 @@ nav_order: 1
 
 
 ¡Has venido!
-{:.label.label-purple }
+{:.label.label-red }
 
 Ты пришел/пришла!
 {: .label .label-black }
@@ -27,10 +27,10 @@ Here you are .
 {: .label .label-green }
 
 Ты здесь.
-{: .label .label-purple }
+{: .label .label-red }
 
 Você chegou aqui!
-{: .label .label-green }
+{: .label .label-red }
 
 Tu es là aussi.
 {: .label .label-yellow }
