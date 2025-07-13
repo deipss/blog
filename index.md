@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-
+# Welcome to my blog
 ¡Has venido!
 {:.label.label-red }
 
@@ -62,12 +62,7 @@ Anda di sini!
 لقد أتيت!
 {: .label .label-orange }
 
-
-
 ---
-
-# Welcome to my blog
-
 recent posts:
 <div class="home-posts two-column-wrapper" style="display:flex; gap:2em;">
   <ul>
@@ -82,9 +77,6 @@ recent posts:
     {% endfor %}
   </ul>
 </div>
-
---- 
-
 ```text
 
     /-------------------------------------------------------------\
