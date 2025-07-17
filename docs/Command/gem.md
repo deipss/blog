@@ -9,10 +9,13 @@ last_modified_date: 2025-06-18
 
 - ruby的安装和使用：brew install ruby
 
-```log
+```shell
 brew list | grep ruby
 chruby
 ruby-install
+
+brew install chruby ruby-install
+
 ```
 
 - gem的安装和使用： brew install rubygems
