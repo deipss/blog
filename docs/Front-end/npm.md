@@ -1,7 +1,7 @@
 ---
 layout: default
 title: npm
-parent: Command
+parent: Front-end
 last_modified_date: 2025-05-25
 ---
 
