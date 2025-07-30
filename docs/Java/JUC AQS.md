@@ -37,8 +37,44 @@ last_modified_date: 2025-07-13
 ## 3. AQS 的工作原理
 
 * 当线程请求资源时，尝试通过 `tryAcquire` 或 `tryAcquireShared` 方法获取资源。
+```java
+protected final boolean tryAcquire(int acquires) {
+            final Thread current = Thread.currentThread();
+            int c = getState();
+            if (c == 0) {
+                if (!hasQueuedPredecessors() &&
+                    compareAndSetState(0, acquires)) {
+                    setExclusiveOwnerThread(current);
+                    return true;
+                }
+            }
+            else if (current == getExclusiveOwnerThread()) {
+                int nextc = c + acquires;
+                if (nextc < 0)
+                    throw new Error("Maximum lock count exceeded");
+                setState(nextc);
+                return true;
+            }
+            return false;
+        } 
+```
 * 获取失败时，将当前线程包装成节点加入等待队列，线程阻塞等待。
 * 释放资源时，调用 `release` 或 `releaseShared` 方法唤醒等待队列中的线程。
+
+```java
+protected final boolean tryRelease(int releases) {
+            int c = getState() - releases;
+            if (Thread.currentThread() != getExclusiveOwnerThread())
+                throw new IllegalMonitorStateException();
+            boolean free = false;
+            if (c == 0) {
+                free = true;
+                setExclusiveOwnerThread(null);
+            }
+            setState(c);
+            return free;
+        }
+```
 * AQS 通过 **CAS 操作** 修改 `state` 状态，保证线程安全。
 
 ---

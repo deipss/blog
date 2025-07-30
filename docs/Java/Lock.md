@@ -18,6 +18,10 @@ last_modified_date: 2025-05-25
 如哈希码（HashCode）、GC 分代年龄、锁状态标志、线程持有的锁、偏向线程 ID、偏向时间戳等。
 这些信息被存储在 Mark Word（标记字段）中，而 `synchronized` 使用的锁就是存储在 Mark Word 中的。
 
+![img.png](img/synchronized-1.png)
+
+![img.png](img/mark-word-1.png)
+
 - Monitor 机制
 
 `synchronized` 的实现依赖于 Monitor 机制。Monitor 是 JVM 中的一个同步工具，

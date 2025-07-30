@@ -396,6 +396,16 @@ public class CyclicBarrierDemo {
 > 数据的插入与取出共用同一个锁，因此ArrayBlockingQueue并不能实现生产、消费同时进行。而且在创建ArrayBlockingQueue时，
 > 我们还可以控制对象的内部锁是否采用公平锁，默认采用非公平锁。
 
+```java
+    /** Main lock guarding all access */
+    final ReentrantLock lock;
+
+    /** Condition for waiting takes */
+    private final Condition notEmpty;
+
+    /** Condition for waiting puts */
+    private final Condition notFull;
+```
 ## 7.2. LinkedBlockingQueue
 
 > 基于单向链表的阻塞队列实现，在初始化LinkedBlockingQueue的时候可以指定大小，
