@@ -151,6 +151,17 @@ private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
     private static int runStateOf(int c)     { return c & ~CAPACITY; }
     private static int workerCountOf(int c)  { return c & CAPACITY; }
     private static int ctlOf(int rs, int wc) { return rs | wc; }
+    
+    
+COUNT_BITS = 29
+CAPACITY   = 536870911  (00011111111111111111111111111111)
+
+RUNNING    = -536870912 (11100000000000000000000000000000)
+SHUTDOWN   = 0          (00000000000000000000000000000000)
+STOP       = 536870912  (00100000000000000000000000000000)
+TIDYING    = 1073741824 (01000000000000000000000000000000)
+TERMINATED = 1610612736 (01100000000000000000000000000000)
+
 ```
 
 - RUNNING：执行状态，表示当前的线程池可以接受新任务且在处理**等待队列**中的任务。

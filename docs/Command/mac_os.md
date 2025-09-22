@@ -146,7 +146,7 @@ Apple M3是苹果公司研发、台积电制造的一款单片系统，
 用作Mac台式机和笔记本电脑的中央处理器和图形处理器。
 于2023年的苹果全球开发者大会发布，为苹果公司的Apple Silicon中、
 M系列的第三代产品，亦是Mac向苹果芯片迁移计划中的一部分，构建于ARM平台。
-1
+
 
 # 3. 目录
 
@@ -155,6 +155,8 @@ M系列的第三代产品，亦是Mac向苹果芯片迁移计划中的一部分�
 ![mac_file.png](img%2Fmac_file.png)
 
 右侧的就是非root的权限的文件夹，其他的就是需要root权限才可以访问,资源库就是Library文件夹
+
+> 其他隐藏的目录，在finder中，可以按 command + shift + .
 
 - /System 文件夹，系统文件夹。与Windows 之中的 C:\windows32 等文件夹类似。
     - Library 系统资料库，其中的 Caches 可以删除。
@@ -172,7 +174,7 @@ M系列的第三代产品，亦是Mac向苹果芯片迁移计划中的一部分�
 - tabby 远程登陆
 - scroll reverser 用于鼠标与触摸板的转换
 - logi optional 罗技鼠键
-
+- 腾讯柠檬 用以整理大文件
 
 # 5. nmap
 ```text

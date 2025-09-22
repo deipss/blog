@@ -11,7 +11,8 @@ last_modified_date: 2025-05-25
 
 ## 1.1. 办公
 
-- office 套装,使用WPS也可以
+- office 套装
+- WPS
 - chrome
 - 腾讯电脑管家（安装jdk1.8）
 - Chocolatey windows的包管理工具
@@ -19,7 +20,7 @@ last_modified_date: 2025-05-25
 ## 1.2. 编码
 
 - idea
-- pyCharm
+- pycharm
 - vscode
 - trae
 - notepad++
@@ -41,6 +42,7 @@ last_modified_date: 2025-05-25
 
 - charles(抓包收费)  whistle（抓包免费）
 - MobaXterm 远程登陆
+- tabby 远程登陆
 - ~~postman postwoman~~
 - hoppscotch 用来代替postman的
 - SwitchHosts (mac上是ihost)
